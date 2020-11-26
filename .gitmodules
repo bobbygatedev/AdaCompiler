@@ -1,0 +1,3 @@
+[submodule "Seamath"]
+	path = Seamath
+	url = https://github.com/bobbygatedev/seamath.git

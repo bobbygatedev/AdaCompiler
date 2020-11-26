@@ -1,0 +1,48 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": 
+  [
+    {
+        "label": "Build",
+        "type": "shell",
+        "group": {
+            "kind": "build",
+            "isDefault": true
+        },
+        "options": {
+            "cwd": "${workspaceFolder}"
+        },
+        
+        "windows": {
+            "command": ["AdaCompiler.exe"] ,
+            "args": [ "build" , "${workspaceFolder}"  ]
+        },
+        "problemMatcher": {
+            "owner": "ada",
+            "fileLocation": ["absolute"],
+            "pattern": {
+                "regexp": "^(.*)\\((\\d+),(\\d+)\\):\\s*(warning|error)\\s*ada\\s*:\\s+(.*)$",
+                "file": 1,
+                "line": 2,
+                "column": 3,
+                "severity": 4,
+                "message": 5
+            }
+        }    },
+    {
+        "label": "Clean",
+        "type": "shell",
+        "options": {
+            "cwd": "${workspaceFolder}"
+        },
+        "windows": {
+            "command": "./clean.bat"
+        },
+        "group":"build",
+        "problemMatcher": []
+    }
+],
+
+}

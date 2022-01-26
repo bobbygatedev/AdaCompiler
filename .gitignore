@@ -1,3 +1,4 @@
 /.vs
 /bin
 /obj
+/packages/Newtonsoft.Json.13.0.1

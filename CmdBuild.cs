@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace AdaCompiler
+﻿namespace AdaCompiler
 {
-
    public class CmdBuild : Cmd
    {
       public override string Discriminant => "build";

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace AdaCompiler
+﻿namespace AdaCompiler
 {
    public abstract class Param
    {

@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace AdaCompiler
+﻿namespace AdaCompiler
 {
    public class CmdRebuild : Cmd
    {

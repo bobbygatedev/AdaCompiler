@@ -1,11 +1,7 @@
 ﻿using Gate.Tools;
 using Gate.Tools.Text;
-using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Security.AccessControl;
-using System.Text;
 
 namespace AdaCompiler
 {
@@ -25,7 +21,7 @@ namespace AdaCompiler
       }
 
       protected override string myGetReworkedStdOutErr(Settings settings, string sourcePath, string stdOutput, string stdError) => 
-         stdError == "" ? "Compilation of " + Path.GetFileName(sourcePath) + " successfull." : stdError;
+         stdError == "" ? $"Compilation of {Path.GetFileName(sourcePath)} successfull." : stdError;
 
       protected override bool myIsRecompileNecessary(Settings settings, string sourcePath)
       {
